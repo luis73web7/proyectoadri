@@ -508,8 +508,7 @@ body {
 .card__circle {
   width: 6rem;
   height: 6rem;
-  border-radius: 50%;
-  background-color: var(--cafe5);
+ 
   margin-bottom: 2rem;
 }
 
@@ -523,6 +522,15 @@ body {
   font-size: 1.5remm;
   line-height: 1.6;
   color: #555;
+}
+
+.card__iconos {
+  font-size: 5rem;
+  color: var(--cafe);
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  align-items: center;     /* centra vertical */
+  text-align: center;
 }
 
 /* RESPONSIVE */
