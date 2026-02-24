@@ -673,43 +673,68 @@ body {
   }
 }
 
-/* ===================== */
-/* SECCIÓN SERVICIOS */
-/* ===================== */
+/* ============================= */
+/* SECCION SERVICIOS RESPONSIVA */
+/* ============================= */
 
 .servicios {
   padding: 6rem 2rem;
-  background-color: var(--blanco);
+
+  background: var(--blanco);
 }
+
+/* HEADER */
 
 .servicios__header {
   text-align: center;
+
   margin-bottom: 4rem;
 }
 
 .servicios__title {
   font-size: 3.6rem;
+
   color: var(--cafe);
+
   margin-bottom: 1rem;
 }
 
 .servicios__subtitle {
   font-size: 1.6rem;
+
   color: var(--cafe3);
+
+  max-width: 60rem;
+
+  margin: auto;
 }
+
+/* GRID RESPONSIVO AUTOMATICO */
 
 .servicios__grid {
   max-width: 120rem;
+
   margin: auto;
+
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+
   gap: 2.5rem;
+
+  /* CLAVE: totalmente responsivo */
+  grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
 }
+
+/* CARD */
 
 .servicios__card {
   padding: 0;
+
   overflow: hidden;
+
+  height: 100%;
 }
+
+/* IMAGEN */
 
 .servicios__figure {
   margin: 0;
@@ -717,34 +742,85 @@ body {
 
 .servicios__img {
   width: 100%;
-  height: 18rem;
+
+  height: 20rem;
+
   object-fit: cover;
 }
 
+/* BODY */
+
 .servicios__body {
   padding: 2rem;
+
+  display: flex;
+
+  flex-direction: column;
+
+  height: 100%;
 }
 
 .servicios__card-title {
   font-size: 2rem;
+
   color: var(--cafe);
+
   margin-bottom: 1rem;
 }
 
 .servicios__text {
-  font-size: 1.4rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+
   color: var(--cafe3);
+
+  margin-bottom: 1.5rem;
+
+  flex-grow: 1;
 }
+
+/* LINK */
 
 .servicios__link {
   text-decoration: none;
+
   color: var(--cafe);
+
   font-weight: 600;
+
+  font-size: 1.5rem;
 }
 
 .servicios__link:hover {
   color: var(--cafe2);
+}
+
+/* ============================= */
+/* AJUSTES EXTRA */
+/* ============================= */
+
+/* Desktop grande */
+@media (min-width: 1200px) {
+  .servicios__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .servicios {
+    padding: 5rem 2rem;
+  }
+}
+
+/* Movil */
+@media (max-width: 480px) {
+  .servicios {
+    padding: 4rem 1.5rem;
+  }
+
+  .servicios__title {
+    font-size: 2.8rem;
+  }
 }
 
 /* ===================== */
