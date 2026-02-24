@@ -195,7 +195,6 @@ body {
   text-decoration: none;
   color: var(--cafe);
   transition: 0.3s;
-  
 }
 
 .footer ul li a:hover {
@@ -313,8 +312,8 @@ body {
   width: 42rem;
   max-width: 100%;
   display: block;
-  box-shadow:0 4px 10px rgba(16, 16, 16, 0.29), 0 10px 25px rgba(0, 0, 0, 0.12);
- border-radius: 0.8rem;
+  box-shadow: 0 4px 10px rgba(16, 16, 16, 0.29), 0 10px 25px rgba(0, 0, 0, 0.12);
+  border-radius: 0.8rem;
 }
 
 /* RESPONSIVE TABLET */
@@ -364,7 +363,7 @@ body {
 
 .contacto__title {
   font-size: 4rem;
-  color:var(--cafe);
+  color: var(--cafe);
   margin-bottom: 3rem;
   text-align: center;
 }
@@ -374,7 +373,6 @@ body {
   gap: 3rem;
   align-items: center;
   justify-content: space-between;
- 
 }
 
 .contacto__info {
@@ -421,7 +419,7 @@ body {
 .contacto__iframe {
   width: 100%;
   height: 40rem;
-  border:0;
+  border: 0;
   border-radius: 0.8rem;
 }
 
@@ -507,7 +505,7 @@ body {
 .card__circle {
   width: 6rem;
   height: 6rem;
- 
+
   margin-bottom: 2rem;
 }
 
@@ -528,7 +526,7 @@ body {
   color: var(--cafe);
   display: flex;
   justify-content: center; /* centra horizontal */
-  align-items: center;     /* centra vertical */
+  align-items: center; /* centra vertical */
   text-align: center;
 }
 
@@ -542,13 +540,13 @@ body {
 
 /* ==========SECCION NUESTRO EQUIPO==========*/
 
-.equipos__img{
+.equipos__img {
   width: 20.1rem;
   height: 20.1rem;
   border-radius: 0.8rem;
 }
 
-.fondoequipos{
+.fondoequipos {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -577,10 +575,8 @@ body {
   border-radius: 14px;
 
   background-color: var(--blanco);
-  
-  box-shadow:
-    0 4px 10px rgba(0,0,0,0.05),
-    0 10px 25px rgba(0,0,0,0.08);
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05), 0 10px 25px rgba(0, 0, 0, 0.08);
 
   transition: 0.3s;
 }
@@ -612,14 +608,11 @@ body {
   line-height: 1.5;
 }
 
-
 /* VALORES */
 .valores {
   padding: 60px 20px;
   background-color: var(--beige-claro);
 }
-
-
 
 .valores__grid {
   display: grid;
@@ -631,17 +624,14 @@ body {
   border-radius: 1.2rem;
   background-color: var(--blanco);
 
- 
-  box-shadow:
-    0 4px 10px rgba(0, 0, 0, 0.05),
-    0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05), 0 10px 25px rgba(0, 0, 0, 0.08);
   padding: 40px 20px;
 }
 
 .valores__icon {
   width: 60px;
   height: 60px;
-  
+
   margin: 0 auto 15px;
 
   border-radius: 50%;
@@ -667,10 +657,8 @@ body {
   line-height: 1.5;
 }
 
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
-
   .personal__grid {
     grid-template-columns: 1fr;
   }
@@ -683,5 +671,283 @@ body {
   .valores__grid {
     grid-template-columns: 1fr;
   }
+}
 
+/* ===================== */
+/* SECCIÓN SERVICIOS */
+/* ===================== */
+
+.servicios {
+  padding: 6rem 2rem;
+  background-color: var(--blanco);
+}
+
+.servicios__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.servicios__title {
+  font-size: 3.6rem;
+  color: var(--cafe);
+  margin-bottom: 1rem;
+}
+
+.servicios__subtitle {
+  font-size: 1.6rem;
+  color: var(--cafe3);
+}
+
+.servicios__grid {
+  max-width: 120rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+
+.servicios__card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.servicios__figure {
+  margin: 0;
+}
+
+.servicios__img {
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+}
+
+.servicios__body {
+  padding: 2rem;
+}
+
+.servicios__card-title {
+  font-size: 2rem;
+  color: var(--cafe);
+  margin-bottom: 1rem;
+}
+
+.servicios__text {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--cafe3);
+}
+
+.servicios__link {
+  text-decoration: none;
+  color: var(--cafe);
+  font-weight: 600;
+}
+
+.servicios__link:hover {
+  color: var(--cafe2);
+}
+
+/* ===================== */
+/* MODAL SERVICIOS */
+/* ===================== */
+
+.modal-servicios {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+
+  display: none;
+
+  /* overlay integrado */
+  background: rgba(0, 0, 0, 0.6);
+
+  /* permite scroll */
+  overflow-y: auto;
+
+  padding: 2rem;
+
+  z-index: 999;
+
+  /* mejora scroll */
+  scroll-behavior: smooth;
+}
+
+/* Mostrar modal */
+.modal-servicios:target {
+  display: block;
+}
+
+/* ===================== */
+/* CONTENEDOR */
+/* ===================== */
+
+.modal-servicios__container {
+  position: relative;
+
+  max-width: 100rem;
+  width: 100%;
+
+  margin: 4rem auto;
+
+  background: var(--blanco);
+
+  border-radius: 1.2rem;
+
+  padding: 3rem;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15), 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  animation: modalFade 0.25s ease;
+}
+
+/* ===================== */
+/* HEADER */
+/* ===================== */
+
+.modal-servicios__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 2rem;
+}
+
+.modal-servicios__title {
+  font-size: 2.4rem;
+  color: var(--cafe);
+}
+
+.modal-servicios__close {
+  text-decoration: none;
+  font-size: 2.6rem;
+  color: var(--cafe);
+  transition: 0.2s;
+}
+
+.modal-servicios__close:hover {
+  opacity: 0.6;
+}
+
+/* ===================== */
+/* CONTENIDO */
+/* ===================== */
+
+.modal-servicios__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* ===================== */
+/* SECCIONES */
+/* ===================== */
+
+.modal-servicios__section {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.modal-servicios__section.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ===================== */
+/* IMAGEN */
+/* ===================== */
+
+.modal-servicios__img {
+  width: 26rem;
+  max-width: 100%;
+  border-radius: 0.8rem;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ===================== */
+/* INFO */
+/* ===================== */
+
+.modal-servicios__info {
+  flex: 1;
+}
+
+.modal-servicios__info h4 {
+  font-size: 2rem;
+  color: var(--cafe);
+  margin-bottom: 1rem;
+}
+
+.modal-servicios__info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-servicios__info li {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0.8rem 0;
+
+  border-bottom: 0.1rem solid var(--cafe4);
+
+  font-size: 1.5rem;
+  color: var(--negro);
+}
+
+/* ===================== */
+/* ANIMACIÓN */
+/* ===================== */
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===================== */
+/* RESPONSIVE TABLET */
+/* ===================== */
+
+@media (max-width: 768px) {
+  .modal-servicios {
+    padding: 1.5rem;
+  }
+
+  .modal-servicios__container {
+    padding: 2rem;
+    margin: 2rem auto;
+  }
+
+  .modal-servicios__section,
+  .modal-servicios__section.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .modal-servicios__img {
+    width: 100%;
+  }
+}
+
+/* ===================== */
+/* RESPONSIVE MOVIL */
+/* ===================== */
+
+@media (max-width: 480px) {
+  .modal-servicios__container {
+    padding: 1.5rem;
+  }
+
+  .modal-servicios__title {
+    font-size: 2rem;
+  }
 }

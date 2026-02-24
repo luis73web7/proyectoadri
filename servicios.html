@@ -47,13 +47,200 @@
       </nav>
     </header>
 
-
-   <!--  ========== Sección de contenido principal============ -->
+    <!--  ========== Sección de contenido principal============ -->
     <main>
-      
-    </main>
+      <!-- ===================== -->
+      <!-- SECCIÓN SERVICIOS -->
+      <!-- ===================== -->
+      <section class="servicios" id="servicios">
+        <header class="servicios__header">
+          <h2 class="servicios__title">Nuestros Servicios</h2>
+          <p class="servicios__subtitle">
+            Descubre nuestra amplia gama de tratamientos diseñados para cuidar
+            tu belleza y bienestar.
+          </p>
+        </header>
 
-    
+        <div class="servicios__grid">
+          <!-- Servicio 1 -->
+          <article class="servicios__card card">
+            <figure class="servicios__figure">
+              <img
+                src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881"
+                alt="Tratamientos faciales"
+                class="servicios__img"
+              />
+            </figure>
+
+            <div class="servicios__body">
+              <h3 class="servicios__card-title">Faciales</h3>
+              <p class="servicios__text">
+                Tratamientos personalizados para revitalizar y rejuvenecer tu
+                piel con tecnología de vanguardia.
+              </p>
+
+              <a href="#modal-servicios" class="servicios__link"> Ver más → </a>
+            </div>
+          </article>
+
+          <!-- Servicio 2 -->
+          <article class="servicios__card card">
+            <figure class="servicios__figure">
+              <img
+                src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874"
+                alt="Tratamientos corporales"
+                class="servicios__img"
+              />
+            </figure>
+
+            <div class="servicios__body">
+              <h3 class="servicios__card-title">Corporales</h3>
+              <p class="servicios__text">
+                Tratamientos integrales para el cuidado y embellecimiento de tu
+                cuerpo.
+              </p>
+
+              <a href="#modal-servicios" class="servicios__link"> Ver más → </a>
+            </div>
+          </article>
+
+          <!-- Servicio 3 -->
+          <article class="servicios__card card">
+            <figure class="servicios__figure">
+              <img
+                src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9"
+                alt="Tratamientos capilares"
+                class="servicios__img"
+              />
+            </figure>
+
+            <div class="servicios__body">
+              <h3 class="servicios__card-title">Capilares</h3>
+              <p class="servicios__text">
+                Soluciones especializadas para el cuidado y fortalecimiento de
+                tu cabello.
+              </p>
+
+              <a href="#modal-servicios" class="servicios__link"> Ver más → </a>
+            </div>
+          </article>
+
+          <!-- Servicio 4 -->
+          <article class="servicios__card card">
+            <figure class="servicios__figure">
+              <img
+                src="https://images.unsplash.com/photo-1594824476967-48c8b964273f"
+                alt="Servicios complementarios"
+                class="servicios__img"
+              />
+            </figure>
+
+            <div class="servicios__body">
+              <h3 class="servicios__card-title">Complementarios</h3>
+              <p class="servicios__text">
+                Servicios adicionales para complementar tu experiencia de
+                belleza y bienestar.
+              </p>
+
+              <a href="#modal-servicios" class="servicios__link"> Ver más → </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===================== -->
+      <!-- MODAL SERVICIOS -->
+      <!-- ===================== -->
+      <div id="modal-servicios" class="modal-servicios">
+        <a href="#servicios" class="modal-servicios__overlay"></a>
+
+        <div class="modal-servicios__container">
+          <header class="modal-servicios__header">
+            <h3 class="modal-servicios__title">Lista de Servicios y Precios</h3>
+            <a href="#servicios" class="modal-servicios__close">✕</a>
+          </header>
+
+          <div class="modal-servicios__content">
+            <!-- Faciales -->
+            <section class="modal-servicios__section">
+              <img
+                src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881"
+                class="modal-servicios__img"
+                alt="Faciales"
+              />
+
+              <div class="modal-servicios__info">
+                <h4>Faciales</h4>
+                <ul>
+                  <li>Limpieza facial profunda <span>₡25,000</span></li>
+                  <li>Facial hidratante <span>₡30,000</span></li>
+                  <li>Facial anti-edad <span>₡40,000</span></li>
+                  <li>Tratamiento acné <span>₡35,000</span></li>
+                  <li>Microdermoabrasión <span>₡45,000</span></li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- Corporales -->
+            <section class="modal-servicios__section reverse">
+              <div class="modal-servicios__info">
+                <h4>Corporales</h4>
+                <ul>
+                  <li>Masaje relajante <span>₡35,000</span></li>
+                  <li>Reducción corporal <span>₡50,000</span></li>
+                  <li>Drenaje linfático <span>₡45,000</span></li>
+                  <li>Envoltura corporal <span>₡40,000</span></li>
+                </ul>
+              </div>
+
+              <img
+                src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874"
+                class="modal-servicios__img"
+                alt="Corporales"
+              />
+            </section>
+
+            <!-- Capilares -->
+            <section class="modal-servicios__section">
+              <img
+                src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9"
+                class="modal-servicios__img"
+                alt="Capilares"
+              />
+
+              <div class="modal-servicios__info">
+                <h4>Capilares</h4>
+                <ul>
+                  <li>Diagnóstico capilar <span>₡20,000</span></li>
+                  <li>Tratamiento hidratante <span>₡30,000</span></li>
+                  <li>Control caída <span>₡35,000</span></li>
+                  <li>Restauración profunda <span>₡40,000</span></li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- Complementarios -->
+            <section class="modal-servicios__section reverse">
+              <div class="modal-servicios__info">
+                <h4>Complementarios</h4>
+                <ul>
+                  <li>Depilación facial <span>₡15,000</span></li>
+                  <li>Depilación corporal <span>₡25,000</span></li>
+                  <li>Manicure <span>₡12,000</span></li>
+                  <li>Pedicure <span>₡18,000</span></li>
+                </ul>
+              </div>
+
+              <img
+                src="https://images.unsplash.com/photo-1594824476967-48c8b964273f"
+                class="modal-servicios__img"
+                alt="Complementarios"
+              />
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <!-- Seccion de footer -->
     <footer class="footer">
