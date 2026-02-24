@@ -195,6 +195,7 @@ body {
   text-decoration: none;
   color: var(--cafe);
   transition: 0.3s;
+  
 }
 
 .footer ul li a:hover {
@@ -312,6 +313,8 @@ body {
   width: 42rem;
   max-width: 100%;
   display: block;
+  box-shadow:0 4px 10px rgba(16, 16, 16, 0.29), 0 10px 25px rgba(0, 0, 0, 0.12);
+ border-radius: 0.8rem;
 }
 
 /* RESPONSIVE TABLET */
