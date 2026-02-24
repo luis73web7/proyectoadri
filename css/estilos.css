@@ -348,9 +348,7 @@ body {
 }
 
 /* ============PAGINA CONTACTO=================*/
-/* ========================= */
-/* MAPA */
-/* ========================= */
+/* ICONOS EN PAGINA DE CONTACTOS */
 .contacto {
   background-color: #ffffff;
   padding: 4rem 2rem;
@@ -363,7 +361,6 @@ body {
 
 .contacto__title {
   font-size: 4rem;
-  font-weight: 700;
   color:var(--cafe);
   margin-bottom: 3rem;
   text-align: center;
@@ -463,12 +460,11 @@ body {
   }
 }
 
-
-
-
 /* ============PAGINA NOSOTROS=================*/
+
+/* ============SECCION MISIÓN Y VISIÓN==========*/
 .info {
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
 }
 
 .info__title {
@@ -539,4 +535,18 @@ body {
   .info__cards {
     flex-direction: column;
   }
+}
+
+/* ==========SECCION NUESTRO EQUIPO==========*/
+
+.equipos__img{
+  width: 50%;
+  border-radius: 0.8rem;
+}
+
+.fondoequipos{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
