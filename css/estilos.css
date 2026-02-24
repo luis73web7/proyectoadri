@@ -1,0 +1,534 @@
+/* CSS INICIALES */
+/* Variables de colores y fuentes */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+:root {
+  --negro: #000;
+  --blanco: #ffffff;
+  --cafe: #733f2d;
+  --cafe2: #8c593b;
+  --cafe3: #a67458;
+  --cafe4: #bfa08e;
+  --cafe5: #bf9673;
+  --fuente1: "DM Sans", sans-serif;
+}
+
+/* Sirve para trabajar con multiplos de 10px  */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: var(--fuente1);
+}
+
+/* Sirve para que herede el box-sizing a todas las etiquetas */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+/* ************************************* CÓDIGO ACÁ********************************** */
+
+/* ===== HEADER GENERAL ===== */
+
+.header {
+  background: var(--cafe);
+  color: var(--blanco);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  position: relative;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* ===== BARRA DE NAVEGACIÓN ===== */
+
+.nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #f39c12;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #dbe913;
+  transition: 0.3s ease;
+}
+
+/* Hover elegante */
+.nav__link:hover {
+  opacity: 0.7;
+}
+
+/* Estado ACTIVO */
+.nav__link--active {
+  border-bottom: 0.2rem solid var(--blanco);
+}
+.nav__link--inactive {
+  border-bottom: none;
+}
+
+/* CHECKBOX OCULTO */
+
+#menu-toggle {
+  display: none;
+}
+
+/* ICONO HAMBURGUESA */
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-icon span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* RESPONSIVE MENÚ*/
+
+@media (max-width: 768px) {
+  .nav__link--active {
+    border-bottom: none;
+  }
+  /* Mostrar icono */
+  .menu-icon {
+    display: flex;
+  }
+
+  /* Ocultar menú por defecto */
+  .nav {
+    position: absolute;
+    top: 11rem;
+    left: 0;
+    width: 100%;
+    background: var(--cafe);
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease;
+  }
+
+  .nav a {
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #333;
+  }
+
+  /* Cuando el checkbox está activo */
+  #menu-toggle:checked ~ .nav {
+    max-height: 300px;
+  }
+}
+
+/* ===== FOOTER GENERAL ===== */
+.footer {
+  background-color: #bfa08ebc;
+  color: var(--cafe);
+  padding: 5rem 2rem 2rem;
+  /* font-family: Arial, sans-serif; */
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  max-width: 120rem;
+  margin: auto;
+}
+
+/* Títulos */
+.footer h3,
+.footer h4 {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* Logo */
+.logo {
+  font-size: 2.2rem;
+}
+
+/* Texto */
+.footer p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+/* Lista */
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: var(--cafe);
+  transition: 0.3s;
+}
+
+.footer ul li a:hover {
+  opacity: 0.7;
+}
+
+/* Iconos contacto */
+.footer i {
+  margin-right: 0.8rem;
+}
+
+/* Redes sociales */
+.social-icons a,
+.footer-box a {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 1rem;
+  font-size: 1.6rem;
+  color: var(--cafe);
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  opacity: 0.7;
+}
+
+/* Línea inferior */
+.footer-bottom {
+  text-align: center;
+  border-top: 0rem solid #333;
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  font-size: 1.3rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== SECCIOON HERO  ===== */
+
+.hero {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  background: white;
+}
+
+.hero__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 60px;
+
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* TEXTO */
+
+.hero__content {
+  max-width: 50rem;
+}
+
+.hero__title {
+  font-family: var(--fuente1);
+  font-size: 4.8rem;
+  color: var(--cafe);
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.hero__title span {
+  color: var(--color-brown);
+}
+
+/* DESCRIPCION */
+
+.hero__description {
+  font-size: 1.6rem;
+  color: #5a4a3f;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+/* BOTON */
+
+.hero__button {
+  background: var(--cafe);
+  color: var(--blanco);
+  border: none;
+  padding: 1.4rem 3.2rem;
+  font-size: 1.5rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero__button:hover {
+  background: var(--cafe4);
+}
+
+/* IMAGEN */
+
+.hero__image img {
+  width: 42rem;
+  max-width: 100%;
+  display: block;
+}
+
+/* RESPONSIVE TABLET */
+
+@media (max-width: 900px) {
+  .hero__container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero__title {
+    font-size: 4.8rem;
+  }
+}
+
+/* RESPONSIVE MOVIL */
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2rem;
+  }
+
+  .hero__title {
+    font-size: 3.8rem;
+  }
+
+  .hero__description {
+    font-size: 1.5rem;
+  }
+
+  .hero__button {
+    width: 100%;
+  }
+}
+
+/* ============PAGINA CONTACTO=================*/
+/* ========================= */
+/* MAPA */
+/* ========================= */
+.contacto {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+}
+
+.contacto__container {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.contacto__title {
+  font-size: 4rem;
+  font-weight: 700;
+  color:var(--cafe);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.contacto__content {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+
+.contacto__info {
+  flex: 1;
+}
+
+.contacto__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contacto__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.contacto__icon {
+  color: var(--cafe);
+  font-size: 1.6rem;
+  margin-right: 1rem;
+}
+
+.contacto__link {
+  text-decoration: none;
+  color: var(--cafe);
+  transition: opacity 0.3s ease;
+}
+
+.contacto__link:hover {
+  color: var(--negro);
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* MAPA escritorio */
+.contacto__map {
+  width: 37.5rem; /* 600px */
+  flex-shrink: 0;
+}
+
+.contacto__iframe {
+  width: 100%;
+  height: 40rem;
+  border:0;
+  border-radius: 0.8rem;
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+@media (max-width: 64rem) {
+  .contacto__content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contacto__info {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contacto__list {
+    text-align: left;
+  }
+
+  .contacto__map {
+    width: 37.5rem;
+    max-width: 100%;
+  }
+}
+
+/* ========================= */
+/* MOVIL */
+/* ========================= */
+@media (max-width: 48rem) {
+  .contacto__map {
+    width: 100%;
+  }
+
+  .contacto__iframe {
+    height: 18rem;
+  }
+}
+
+
+
+
+/* ============PAGINA NOSOTROS=================*/
+.info {
+  padding: 6rem 2rem;
+}
+
+.info__title {
+  color: var(--cafe);
+  font-size: 4rem;
+  margin-bottom: 4rem;
+  text-align: center; /* centra el texto */
+  width: 100%; /* asegura que ocupe todo el ancho */
+}
+
+.info__cards {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 100rem;
+  margin: 0 auto; /* centra el contenedor de cards */
+}
+
+.card {
+  flex: 1;
+  padding: 3rem 2.5rem;
+  border: 0.3rem solid rgba(0, 0, 0, 0.08);
+  border-radius: 1.2rem;
+  background-color: var(--blanco);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.08);
+}
+
+.card__circle {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: var(--cafe5);
+  margin-bottom: 2rem;
+}
+
+.card__title {
+  color: var(--negro);
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.card__text {
+  font-size: 1.5remm;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .info__cards {
+    flex-direction: column;
+  }
+}
