@@ -512,7 +512,7 @@ body {
 }
 
 .card__title {
-  color: var(--negro);
+  color: var(--cafe);
   font-size: 3rem;
   margin-bottom: 1.5rem;
 }
