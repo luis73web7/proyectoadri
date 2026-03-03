@@ -106,8 +106,12 @@ p {
     }
   }
 
-
-
+/* ************************ */
+.nav-link.active {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+/* ************************ */
 
 
 .navbar {
