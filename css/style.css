@@ -80,6 +80,9 @@ p {
   line-height: 1.8;
 }
 
+.marron{
+  border-color: var(--color-primary-dark)!important;
+}
 /* ============================================
    HEADER Y NAVEGACIÓN
    ============================================ */
