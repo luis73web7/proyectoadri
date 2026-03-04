@@ -447,6 +447,14 @@ section {
   margin-bottom: 1rem;
 }
 
+
+.founder-image1 img {
+  width: 100% !important;
+  height: 350px !important;       /* misma altura fija */
+  object-fit:contain;   /* mantiene proporción */
+}
+
+
 .founder-card {
   background-color: var(--color-white);
   padding: 2.5rem;
